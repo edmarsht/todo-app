@@ -39,7 +39,7 @@ function Todo({ todo }) {
             <div className={classes.paper}>
                 <h1>Open</h1>
                 <input placeholder={todo.todo} value={input} onChange={event => setInput(event.target.value)}/>
-                <Button onClick={e => setOpen(false)}>Update To do </Button>
+                <Button onClick={updateTodo}>Update To do </Button>
             </div>
         </Modal>
         <List className="todo__list">
