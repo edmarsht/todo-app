@@ -1,5 +1,5 @@
 <h1> A todo list app 📝 </h1>
-I made a todo list app with React Js using a full CRUD functionality. <br>
+A todo list app with React Js using a full CRUD functionality. <br>
 The database is hosted in real time and deploy on firebase. <br>
 I used Material-ui to design the app <br>
 <br>
