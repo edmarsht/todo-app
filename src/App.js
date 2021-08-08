@@ -42,7 +42,7 @@ function App() {
 
           <form>
             <FormControl>
-              <InputLabel> Write a to do thing 👌</InputLabel>
+              <InputLabel> Your to do 👌</InputLabel>
               <Input value={input} onChange={event => setInput(event.target.value)}/>
             </FormControl>
             <Button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary">
