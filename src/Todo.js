@@ -3,18 +3,17 @@ import './Todo.css';
 import db from './firebase'
 import { Button } from '@material-ui/core';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import { List, ListItem, ListItemText, Modal } from '@material-ui/core'
+import { Modal } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
-import { CenterFocusStrong } from '@material-ui/icons';
-import { blue } from '@material-ui/core/colors';
+
 
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+
 
 
 
@@ -98,7 +97,6 @@ function Todo({ todo }) {
 
       </CardActions>
     </Card>
-
         </>
     )
 };

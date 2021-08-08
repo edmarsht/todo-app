@@ -9,10 +9,32 @@ import db from './firebase';
 import firebase from 'firebase';
 
 
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    bottom: 0, 
+    paddingTop: 115,
+  },
+  color: {
+    backgroundColor: 'black',
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
+  const classes = useStyles();
 
 
   useEffect(() => {
@@ -35,6 +57,7 @@ function App() {
   })
 
   return (
+    <>
     <div className="App">
       <header className="App">
         <a className="App">
@@ -58,6 +81,18 @@ function App() {
         </a>
       </header>
     </div>
+   
+    <div className={classes.root}>
+    <AppBar className={classes.color} position="fixed">
+        <Toolbar>
+        <Typography variant="h6" className={classes.title}>
+            To do list App
+        </Typography>
+        <Button color="inherit">Made by Edouard Toulet 🚀 </Button>
+        </Toolbar>
+    </AppBar>
+    </div>
+  </>
   );
 }
 
