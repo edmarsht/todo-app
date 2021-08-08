@@ -7,11 +7,16 @@ import { List, ListItem, ListItemText, Modal } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { CenterFocusStrong } from '@material-ui/icons';
 import { blue } from '@material-ui/core/colors';
+
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+
+
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -37,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 14,
       },
       pos: {
-        marginBottom: 80,
+        marginBottom: 30,
       },
   }));
 
@@ -87,6 +92,30 @@ function Todo({ todo }) {
         <CardActions>
         </CardActions>
         </Card>
+
+
+        <Card className={classes.root}>
+      <CardActionArea>
+        <CardContent>
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+            Go 🚀
+        </Typography>
+        <Typography className={classes.pos} primary={todo.todo} variant="h5" component="h2">
+            {todo.todo}
+        </Typography>
+
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <div className="todo__edit" size="small" color="primary">
+                <Button className="button__todo" onClick={e => setOpen(true)}>Edit</Button>
+                <HighlightOffIcon className="icon__todo" onClick={event => db.collection('todos').doc(todo.id).delete()}></HighlightOffIcon>
+            {/* with a delete event  */}
+            </div>
+
+      </CardActions>
+    </Card>
+
         </>
     )
 };
