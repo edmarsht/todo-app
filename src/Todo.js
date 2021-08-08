@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 1px',
         transform: 'scale(0.8)',
         boxShadow: theme.shadows[5],
-
       },
 
       title: {
@@ -93,7 +92,7 @@ function Todo({ todo }) {
       <CardActions>
         <div className="todo__edit" size="small" color="primary">
                 <Button className="button__todo" onClick={e => setOpen(true)}>Edit</Button>
-                <HighlightOffIcon className="icon__todo" onClick={event => db.collection('todos').doc(todo.id).delete()}></HighlightOffIcon>
+                <HighlightOffIcon fontSize="medium" className="icon__todo" onClick={event => db.collection('todos').doc(todo.id).delete()}></HighlightOffIcon>
             {/* with a delete event  */}
             </div>
 
