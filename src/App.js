@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   color: {
     backgroundColor: 'black',
   },
+  size: {
+    fontSize: 10,
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -58,6 +61,17 @@ function App() {
 
   return (
     <>
+      <div className={classes.root}>
+    <AppBar className={classes.color} position="fixed">
+        <Toolbar>
+        <Typography variant="h6" className={classes.title}>
+            To do list App
+        </Typography>
+        <Button className={classes.size} color="inherit">Made by Edouard Toulet 🚀 </Button>
+        </Toolbar>
+    </AppBar>
+    </div>
+
     <div className="App">
       <header className="App">
         <a className="App">
@@ -80,17 +94,6 @@ function App() {
           </ul>
         </a>
       </header>
-    </div>
-   
-    <div className={classes.root}>
-    <AppBar className={classes.color} position="fixed">
-        <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-            To do list App
-        </Typography>
-        <Button color="inherit">Made by Edouard Toulet 🚀 </Button>
-        </Toolbar>
-    </AppBar>
     </div>
   </>
   );

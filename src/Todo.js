@@ -48,7 +48,6 @@ function Todo({ todo }) {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [input, setInput] = useState();
-    const bull = <span className={classes.bullet}>•</span>;
 
  
     const handleOpen = () => {
